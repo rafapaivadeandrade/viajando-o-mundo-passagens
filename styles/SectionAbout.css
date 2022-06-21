@@ -1,0 +1,9 @@
+#section-about{
+    padding: 90px 0 150px 0 !important;
+}
+
+@media only screen and (max-width: 767px){
+	#section-about{
+        padding: 90px 0 90px 0 !important;
+    }
+}
