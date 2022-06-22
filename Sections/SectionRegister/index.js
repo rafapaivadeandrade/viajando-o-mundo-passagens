@@ -6,8 +6,10 @@ import * as Yup from 'yup';
 import MaskedInput from 'react-text-mask';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import DatePicker from "react-datepicker";
 
-import { ToastContainer, toast } from 'react-toastify';
+import "react-datepicker/dist/react-datepicker.css";
+import toast, { Toaster } from 'react-hot-toast';
 
 const phoneNumberMask = [
   '(',
@@ -27,35 +29,7 @@ const phoneNumberMask = [
   /\d/,
 ];
 
-const optionsUFRG = [
-  { id: 'AC', title: 'Acre' },
-  { id: 'AL', title: 'Alagoas' },
-  { id: 'AP', title: 'Amapa' },
-  { id: 'AM', title: 'Amazonas' },
-  { id: 'BA', title: 'Bahia' },
-  { id: 'CE', title: 'Ceará' },
-  { id: 'DF', title: 'Distrito Federal' },
-  { id: 'ES', title: 'Espirito Santo' },
-  { id: 'GO', title: 'Goiás' },
-  { id: 'MA', title: 'Maranhão' },
-  { id: 'MT', title: 'Mato Grosso' },
-  { id: 'MS', title: 'Mato Grosso do Sul' },
-  { id: 'MG', title: 'Minas Gerais' },
-  { id: 'PA', title: 'Pará' },
-  { id: 'PB', title: 'Paraíba' },
-  { id: 'PR', title: 'Paraná' },
-  { id: 'PE', title: 'Pernambuco' },
-  { id: 'PI', title: 'Piauí' },
-  { id: 'RJ', title: 'Rio de Janeiro' },
-  { id: 'RN', title: 'Rio Grande do Norte' },
-  { id: 'RS', title: 'Rio Grande do Sul' },
-  { id: 'RO', title: 'Rondônia' },
-  { id: 'RR', title: 'Roraima' },
-  { id: 'SC', title: 'Santa Catarina' },
-  { id: 'SP', title: 'São Paulo' },
-  { id: 'SE', title: 'Sergipe' },
-  { id: 'TO', title: 'Tocantins' },
-];
+
 const optionsUF = [
   { id: 'AC', title: 'Acre' },
   { id: 'AL', title: 'Alagoas' },
@@ -86,35 +60,6 @@ const optionsUF = [
   { id: 'TO', title: 'Tocantins' },
 ];
 
-const optionsUFCRM = [
-  { id: 'AC', title: 'Acre' },
-  { id: 'AL', title: 'Alagoas' },
-  { id: 'AP', title: 'Amapa' },
-  { id: 'AM', title: 'Amazonas' },
-  { id: 'BA', title: 'Bahia' },
-  { id: 'CE', title: 'Ceará' },
-  { id: 'DF', title: 'Distrito Federal' },
-  { id: 'ES', title: 'Espirito Santo' },
-  { id: 'GO', title: 'Goiás' },
-  { id: 'MA', title: 'Maranhão' },
-  { id: 'MT', title: 'Mato Grosso' },
-  { id: 'MS', title: 'Mato Grosso do Sul' },
-  { id: 'MG', title: 'Minas Gerais' },
-  { id: 'PA', title: 'Pará' },
-  { id: 'PB', title: 'Paraíba' },
-  { id: 'PR', title: 'Paraná' },
-  { id: 'PE', title: 'Pernambuco' },
-  { id: 'PI', title: 'Piauí' },
-  { id: 'RJ', title: 'Rio de Janeiro' },
-  { id: 'RN', title: 'Rio Grande do Norte' },
-  { id: 'RS', title: 'Rio Grande do Sul' },
-  { id: 'RO', title: 'Rondônia' },
-  { id: 'RR', title: 'Roraima' },
-  { id: 'SC', title: 'Santa Catarina' },
-  { id: 'SP', title: 'São Paulo' },
-  { id: 'SE', title: 'Sergipe' },
-  { id: 'TO', title: 'Tocantins' },
-];
 
 const RegisterSchema = Yup.object().shape({
   name: Yup.string()
@@ -163,13 +108,20 @@ const SectionRegister = () => {
   });
 
   const handleSubmit = async (values, actions) => {
-    window.open(`https://api.whatsapp.com/send?text=Olá gostaria de mais informações sobre:Nome: ${values.name}, 
-    Email:${values.email}, Estado: ${values.fields.state}, Origem: ${values.fields.city}, Destino: ${values.fields.cityDestiny}, 
-    Ida: ${moment(values.fields.dateGoing).format('DD/MM/YYYY')}, Volta: ${moment(values.fields.dateBack).format('DD/MM/YYYY')}${values.message && `, 
-    Mensagem: ${values.message}`} , Contato: ${values.fields.contact}&phone=5581982245535`)
-
+    fetch('/api/mail', {
+      method: 'post',
+      body: JSON.stringify(values),
+    }).then(response => {
+      if(response.status === 200){
+        toast.success('Mensagem enviada com sucesso!')
+      }
+      else{
+        toast.error('Erro ao enviar a mensagem, tente novamente')
+      }
+    }).catch(error => {
+      toast.error('Erro ao enviar a mensagem, tente novamente')
+    })
   };
-
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -177,6 +129,7 @@ const SectionRegister = () => {
 
   return (
     <section id="section-contact" className="dark-mode">
+      <Toaster />
       <div className="wm wm-border dark" data-aos="fade-down">
         Contate-nos
       </div>
@@ -248,6 +201,7 @@ const SectionRegister = () => {
                             ? 'is-invalid'
                             : ''
                             }`}
+
                         />
                         <ErrorMessage
                           component="div"
@@ -379,9 +333,6 @@ const SectionRegister = () => {
 
                   </div>
 
-                  <div className="row">
-                    <ToastContainer />
-                  </div>
                   <div className='col-14'>
                     <label for="">Mensagem</label>
                     <div className="form-group">

@@ -110,12 +110,16 @@ const Header = () => {
           <div className={styles.containerMedia}>
             <ul>
               <li>
-                <BsInstagram size={30} color="#F56040" />
+                <a href='https://www.instagram.com/viajandoomundopassagens' style={{ color: '#000' }} target="_blank" rel="noreferrer">
+                  <BsInstagram size={30} color="#F56040" />
+                </a>
               </li>
             </ul>
             <ul>
               <li>
-                <RiWhatsappFill size={30} color="#5FFC7B" />
+                <a href='https://api.whatsapp.com/send?phone=5581982245535' style={{ color: '#000' }} target="_blank" rel="noreferrer">
+                  <RiWhatsappFill size={30} color="#5FFC7B" />
+                </a>
               </li>
             </ul>
           </div>

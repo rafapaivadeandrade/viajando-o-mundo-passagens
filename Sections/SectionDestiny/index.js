@@ -50,7 +50,7 @@ const SectionDestiny = ({ dataJson }) => {
         <>
             {/* <section id="section-about" className={theme ? "dark-mode" : "light-mode"}> */}
             <section id="section-destiny">
-                <div class="popular_places_area">
+                <div className="popular_places_area">
                     <Slider {...settings}>
                         {dataJson.map((item) => (
                             <div className="card">

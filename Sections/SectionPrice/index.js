@@ -32,7 +32,7 @@ const SectionPrice = ({ theme }) => {
                                 <form className="form-contact contact_form">
                                     <div className="row">
                                         <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center">
-                                            <label for="">Origem</label>
+                                            <label htmlFor="">Origem</label>
                                             <div className="form-group">
                                                 <input className="form-control valid" name="origin" id="origem_top" type="text" placeholder="Origem" required
                                                     onChange={(e) => {
@@ -45,7 +45,7 @@ const SectionPrice = ({ theme }) => {
                                             </div>
                                         </div>
                                         <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center">
-                                            <label for="">Destino</label>
+                                            <label htmlFor="">Destino</label>
                                             <div className="form-group">
                                                 <input className="form-control valid" name="destiny" id="destino_top" type="text" placeholder="Destino" required
                                                     onChange={(e) => {
@@ -58,7 +58,7 @@ const SectionPrice = ({ theme }) => {
                                             </div>
                                         </div>
                                         <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center">
-                                            <label for="">Ida</label>
+                                            <label htmlFor="">Ida</label>
                                             <div className="form-group">
                                                 <input className="form-control valid" name="going" id="ida_top" type="date" placeholder="Ida" required
                                                     onChange={(e) => {
@@ -71,7 +71,7 @@ const SectionPrice = ({ theme }) => {
                                             </div>
                                         </div>
                                         <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center">
-                                            <label for="">Volta</label>
+                                            <label htmlFor="">Volta</label>
                                             <div className="form-group">
                                                 <input className="form-control valid" name="volta_top" id="volta_top" type="date" placeholder="Volta" required
                                                     onChange={(e) => {
@@ -84,7 +84,7 @@ const SectionPrice = ({ theme }) => {
                                             </div>
                                         </div>
                                         <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center">
-                                            <label for="">Quantidade</label>
+                                            <label htmlFor="">Quantidade</label>
                                             <div className="form-group">
                                                 <input className="form-control valid" name="quantity" id="quantidade" type="number" min="0" placeholder="Quantidade" required
                                                     onChange={(e) => {
@@ -97,7 +97,7 @@ const SectionPrice = ({ theme }) => {
                                             </div>
                                         </div>
                                         <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center">
-                                            <label for="">Whatsapp</label>
+                                            <label htmlFor="">Whatsapp</label>
                                             <div className="form-group">
                                                 <input className="form-control valid" name="whatsapp" id="whatsapp" type="text" placeholder="Whatsapp" required
                                                     onChange={(e) => {
@@ -111,7 +111,7 @@ const SectionPrice = ({ theme }) => {
                                         </div>
                                         <div className="col-md-12 d-flex justify-content-center mt-3">
                                             <div className="align-center">
-                                                <button  className="button boxed-btn btn-default" type="submit" onClick={handleSubmit(onSubmit)}>Solicitar Cotação</button>
+                                                <button className="button boxed-btn btn-default" type="submit" onClick={handleSubmit(onSubmit)}>Solicitar Cotação</button>
                                             </div>
                                         </div>
                                     </div>
