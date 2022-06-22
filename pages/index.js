@@ -27,8 +27,6 @@ export default function Home() {
           <AlertBrowser />
 
           <div id="content" className="no-bottom no-top">
-            <BannerParallax />
-
 
             <SectionPrice />
 

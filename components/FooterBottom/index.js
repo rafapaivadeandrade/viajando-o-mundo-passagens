@@ -10,7 +10,7 @@ const FooterBottom = () => {
                         <div className="footer_widget">
                             <div className="footer_logo">
                                 <div style={{textAlign:'center', fill: '#fff'}}>
-                                    <Image src={logo} width={200} height={200} fill="#fff"/>
+                                    <Image src={logo} width={200} height={200} fill="#fff" alt='logo'/>
                                 </div>
                                 <div className="copy_right text-center" style={{ fontWeight: '600', color: '#fff', marginBottom: '10px' }}>
                                     Te levando ao encontro da felicidade!<br />

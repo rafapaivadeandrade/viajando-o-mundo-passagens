@@ -1,8 +1,9 @@
+import Image from 'next/image'
 const LoadingScreen = () => {
 
 return (
     <div className="loading">
-      <img src="https://cdn.dribbble.com/users/107759/screenshots/2436386/copper-loader.gif" alt=""/>
+      <Image src={`https://cdn.dribbble.com/users/107759/screenshots/2436386/copper-loader.gif`} alt=""/>
     </div>
   );
 }

@@ -81,7 +81,7 @@ const Header = () => {
           <div className="social_wrap d-flex">
             <div className={styles.number}>
               <p style={{ fontWeight: '600' }}>
-                <a href='https://api.whatsapp.com/send?phone=5581982245535' style={{ color: '#000' }} target="_blank">
+                <a href='https://api.whatsapp.com/send?phone=5581982245535' style={{ color: '#000' }} target="_blank" rel="noreferrer">
                   <BsTelephone size={10} />
                   {" "}
                   (81) 982245535
@@ -90,7 +90,7 @@ const Header = () => {
             </div>
             <div className='container-media'>
               <p style={{ fontWeight: '600' }}>
-                <a href='https://www.instagram.com/viajandoomundopassagens' style={{ color: '#000' }} target="_blank">
+                <a href='https://www.instagram.com/viajandoomundopassagens' style={{ color: '#000' }} target="_blank" rel="noreferrer">
                   <BsInstagram size={30} color="#F56040" />
                 </a>
               </p>
