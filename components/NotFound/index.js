@@ -13,7 +13,7 @@ const NotFound = () => {
                 <span>4</span>
             </section>
             <div className="link-container">
-                <a target="_blank" href={`/${eventKey}`} className="more-link">Visite o site original</a>
+                <a target="_blank" href={`/${eventKey}`} rel="noreferrer" className="more-link">Visite o site original</a>
                 <p>Certifique-se que o endereço foi digitado corretamente e tente novamente ou entre em contato com o suporte.</p>
             </div>
         </div>

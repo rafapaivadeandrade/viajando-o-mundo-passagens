@@ -4,7 +4,6 @@ import styles from '../styles/Home.module.css'
 import Seo from '../components/Seo';
 import Header from '../components/Header';
 import AlertBrowser from '../components/AlertBrowser';
-import BannerParallax from '../components/BannerParallax';
 import SectionPrice from '../Sections/SectionPrice';
 import SectionRegister from '../Sections/SectionRegister';
 import SectionAbout from '../Sections/SectionAbout';
