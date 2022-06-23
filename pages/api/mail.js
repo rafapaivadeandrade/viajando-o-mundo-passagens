@@ -16,7 +16,7 @@ export default function handler(req, res) {
     Mensagem: ${body.message}\r\n
   `;
   const data = {
-    to: `${body.email}`,
+    to: `viajandoomundopassagens@gmail.com`,
     from: 'viajandoomundopassagens@viajandoomundo.com',
     subject: 'Contato Sobre Passagem',
     text: message
