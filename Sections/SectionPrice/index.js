@@ -13,7 +13,7 @@ const SectionPrice = ({ theme }) => {
 
     const onSubmit = async function (data) {
         const register = { ...registerField, ...data };
-        window.open(`https://api.whatsapp.com/send?text=Olá gostaria de mais informações sobre: Origem: ${register.origin} Destino: ${register.destiny} Ida: ${moment(register.going).format('DD/MM/YYYY')} Volta: ${moment(register.return).format('DD/MM/YYYY')} Quantidade: ${register.quantity} Contato: ${register.whatsapp}&phone=5581982245535`)
+        window.open(`https://api.whatsapp.com/send?text=Olá gostaria de mais informações sobre: Origem: ${register.origin} Destino: ${register.destiny} Ida: ${moment(register.going).format('DD/MM/YYYY')} Volta: ${moment(register.return).format('DD/MM/YYYY')} Quantidade: ${register.quantity} Contato: ${register.whatsapp}&phone=5581989845674`)
     };
 
     return (

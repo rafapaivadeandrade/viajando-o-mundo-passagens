@@ -17,7 +17,7 @@ const FooterBottom = () => {
                                 </div>
                             </div>
                             <h4 className="copy_right text-center"><span className="contact-info__icon"><i className="ti-tablet"></i></span> 
-                            Celular: (81) 98224-5535
+                            Celular: (81) 98984-5674
                             </h4>
 
                             <h4 className="copy_right text-center"><span className="contact-info__icon"><i className="ti-email"></i></span>

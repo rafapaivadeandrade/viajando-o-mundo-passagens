@@ -76,7 +76,7 @@ const SectionDestiny = ({ dataJson }) => {
                                     <p></p>
                                     <div className="rating_days d-flex justify-content-between align-center">
                                         <a
-                                            href={`https://api.whatsapp.com/send?text=Olá acessei o seu site e gostaria de tirar uma dúvida&phone=5581982245535`}
+                                            href={`https://api.whatsapp.com/send?text=Olá acessei o seu site e gostaria de tirar uma dúvida&phone=5581989845674`}
                                             className="button boxed-btn btn-default" target="_blank">
                                             Compre agora
                                         </a>
