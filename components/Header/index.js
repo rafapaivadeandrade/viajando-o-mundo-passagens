@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-scroll';
 import { useParams } from 'react-router-dom';
 import styles from './Header.module.css';
-import logo from '../../public/logo.jpeg';
+import logo from '../../public/logo2.jpeg';
 import Image from "next/image";
 import { BsTelephone, BsInstagram } from 'react-icons/bs';
 import { RiWhatsappFill } from 'react-icons/ri';
