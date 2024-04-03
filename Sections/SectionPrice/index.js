@@ -77,22 +77,43 @@ const SectionPrice = ({ theme }) => {
                 >
                   <div
                     style={
-                      windowWidth > 767
+                      windowWidth > 1400
                         ? {
                             padding: "11px",
                             display: "flex",
                             flexDirection: "row",
                             justifyContent: "center",
+                            gap: 60,
                           }
-                        : {
+                        : windowWidth <= 1400 && windowWidth >= 1200
+                        ? {
+                            padding: "11px",
+                            display: "flex",
+                            flexDirection: "row",
+                            justifyContent: "center",
+                            gap: 25,
+                          }
+                        : windowWidth <= 1200 && windowWidth >= 992
+                        ? {
+                            padding: "11px",
+                            display: "flex",
+                            flexDirection: "row",
+                            justifyContent: "center",
+                            gap: 0,
+                          }
+                        : windowWidth <= 992
+                        ? {
                             padding: "11px",
                             display: "flex",
                             flexDirection: "column",
                             justifyContent: "center",
+                            gap: 10,
                           }
+                        : null
                     }
                   >
-                    <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center">
+                    <div className="d-flex flex-column align-items-center">
+                      {/* <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center"> */}
                       <label htmlFor="" color="#fff">
                         Origem
                       </label>
@@ -113,7 +134,7 @@ const SectionPrice = ({ theme }) => {
                         />
                       </div>
                     </div>
-                    <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center">
+                    <div className="d-flex flex-column align-items-center">
                       <label htmlFor="">Destino</label>
                       <div className="form-group">
                         <input
@@ -132,7 +153,7 @@ const SectionPrice = ({ theme }) => {
                         />
                       </div>
                     </div>
-                    <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center">
+                    <div className="d-flex flex-column align-items-center">
                       <label htmlFor="">Ida</label>
                       <div className="form-group">
                         <input
@@ -151,7 +172,7 @@ const SectionPrice = ({ theme }) => {
                         />
                       </div>
                     </div>
-                    <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center">
+                    <div className="d-flex flex-column align-items-center">
                       <label htmlFor="">Volta</label>
                       <div className="form-group">
                         <input
@@ -170,7 +191,7 @@ const SectionPrice = ({ theme }) => {
                         />
                       </div>
                     </div>
-                    <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center">
+                    <div className="d-flex flex-column align-items-center">
                       <label htmlFor="">Quantidade</label>
                       <div className="form-group">
                         <input
@@ -190,7 +211,7 @@ const SectionPrice = ({ theme }) => {
                         />
                       </div>
                     </div>
-                    <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center">
+                    <div className="d-flex flex-column align-items-center">
                       <label htmlFor="">Telefone</label>
                       <div className="form-group">
                         <MaskedInput
@@ -226,7 +247,7 @@ const SectionPrice = ({ theme }) => {
                         />
                       </div>
                     </div>
-                    <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center">
+                    <div className="d-flex flex-column align-items-center">
                       <label htmlFor="">Email</label>
                       <div className="form-group">
                         <input

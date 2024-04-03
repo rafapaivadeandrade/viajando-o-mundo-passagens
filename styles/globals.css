@@ -8517,9 +8517,17 @@ a:hover {
 .footer-logo {
   scale: 2;
 }
+@media only screen and (max-width: 992px) {
+  .box_central_top {
+    /* flex-wrap: nowrap !important; */
+    /* flex-direction: column; */
+    /* width: 102%; */
+    /* height: 815px; */
+  }
+}
 @media only screen and (max-width: 767px) {
   #section-price {
-    height: 970px;
+    height: 1022px;
   }
   .container-header {
     display: flex;
