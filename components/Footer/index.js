@@ -1,14 +1,16 @@
-import React, { useContext } from 'react';
-import ScrollToTop from '../ScrollToTop';
+import React, { useContext } from "react"
+import ScrollToTop from "../ScrollToTop"
 
 const Footer = () => {
-
   return (
     <>
       {/* footer begin */}
       <footer id="section-about" className="style-2">
         <div className="container column">
-          <div className="row justify-content-center" style={{marginBottom: '62px'}}>
+          <div
+            className="row justify-content-center"
+            style={{ marginBottom: "62px" }}
+          >
             <div className="col-lg-6">
               <div className="section_title text-center mb_70">
                 <h3 className="title-section">Sobre</h3>
@@ -22,10 +24,30 @@ const Footer = () => {
                   <div className="story_info">
                     <div className="row">
                       <div className="col-lg-12">
-                        <p></p><p>A partir do nosso banco de milhas, viabilizamos passagens aéreas com pontos de milhagem.&nbsp;Por esse motivo muitas vezes, os valores dos nossos voos podem chegar a até 40% mais barato&nbsp;do que comprando nas companhias. É importante lembrar, que os bilhetes são exatamente&nbsp;os mesmos que as companhias aéreas utilizam, o que muda, é que utilizaremos nossas milhas&nbsp;próprias para que você consiga um valor menor. Você poderá decolar para sua viagem sem&nbsp;precupações pois, nossa empresa atua de forma idônea e com suporte total para sua viagem.&nbsp;</p>
+                        <p></p>
+                        <p>
+                          A partir do nosso banco de milhas, viabilizamos
+                          passagens aéreas com pontos de milhagem.&nbsp;Por esse
+                          motivo muitas vezes, os valores dos nossos voos podem
+                          chegar a até 40% mais barato&nbsp;do que comprando nas
+                          companhias. É importante lembrar, que os bilhetes são
+                          exatamente&nbsp;os mesmos que as companhias aéreas
+                          utilizam, o que muda, é que utilizaremos nossas
+                          milhas&nbsp;próprias para que você consiga um valor
+                          menor. Você poderá decolar para sua viagem
+                          sem&nbsp;precupações pois, nossa empresa atua de forma
+                          idônea e com suporte total para sua viagem.&nbsp;
+                        </p>
                         <h4>&nbsp;</h4>
-                        <h4><strong>Dúvida ? Fale com a gente!&nbsp;</strong></h4>
-                        <p>Nossa equipe está à disposição para esclarecer todas as suas dúvidas através de nossos canais de atendimento.</p><p></p>
+                        <h4>
+                          <strong>Dúvida ? Fale com a gente!&nbsp;</strong>
+                        </h4>
+                        <p>
+                          Nossa equipe está à disposição para esclarecer todas
+                          as suas dúvidas através de nossos canais de
+                          atendimento.
+                        </p>
+                        <p></p>
                       </div>
                     </div>
                   </div>
@@ -38,7 +60,7 @@ const Footer = () => {
       </footer>
       {/* footer close */}
     </>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
