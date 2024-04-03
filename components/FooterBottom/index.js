@@ -2,6 +2,7 @@
 import logo from "../../public/cor_mais_escura.png"
 // import logo from "../../public/toda_preta.png"
 import Image from "next/image"
+import styles from "./footer.module.css"
 
 const FooterBottom = () => {
   return (
@@ -18,6 +19,7 @@ const FooterBottom = () => {
                 <div style={{ textAlign: "center", fill: "#fff" }}>
                   <Image
                     src={logo}
+                    className="footer-logo"
                     width={200}
                     height={120}
                     fill="#fff"
@@ -47,7 +49,7 @@ const FooterBottom = () => {
                 <span className="contact-info__icon">
                   <i className="ti-email"></i>
                 </span>
-                E-mail: Viajandoomundopassagens@gmail.com
+                E-mail: mundomilhaseviagens@gmail.com
               </h4>
             </div>
           </div>

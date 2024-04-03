@@ -1106,6 +1106,11 @@ section {
   /* background: linear-gradient(#46b0e0, #6eadc5); */
 }
 
+#section-contact {
+  background-color: #312454;
+  /* background: linear-gradient(#46b0e0, #6eadc5); */
+}
+
 section.custom-1 {
   border-bottom-left-radius: 100% 100%;
   border-bottom-right-radius: 100% 100%;
@@ -5556,9 +5561,11 @@ img {
 
 .wm.dark.wm-border {
   font-size: calc(1rem + 13vmin);
-  color: rgba(0, 0, 0, 0);
+  /* color: rgba(0, 0, 0, 0); */
+  color: rgba(91, 77, 187, 0);
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgba(255, 255, 255, 0.15);
+  /* -webkit-text-stroke-color: rgba(255, 255, 255, 0.15); */
+  -webkit-text-stroke-color: rgb(91, 77, 187);
 }
 
 .wm.light.wm-border {
@@ -8143,7 +8150,8 @@ h1 {
 
 .separator span:before,
 .separator span:after {
-  border-bottom: 1px solid #0000001a;
+  border-bottom: 2px solid #5b4dbb;
+  /* border-bottom: 2px solid #0000001a; */
 }
 
 header.transparent.header-mobile.height-auto {
@@ -8317,7 +8325,7 @@ input[type="number"] {
   margin: auto;
   z-index: 999;
   position: relative;
-  width: 140%;
+  width: 200%;
 }
 
 .btn-default {
@@ -8506,10 +8514,12 @@ input[type="number"] {
 a:hover {
   text-decoration: none;
 }
-
+.footer-logo {
+  scale: 2;
+}
 @media only screen and (max-width: 767px) {
   #section-price {
-    height: 900px;
+    height: 970px;
   }
   .container-header {
     display: flex;
@@ -8527,7 +8537,7 @@ a:hover {
     width: 120%;
   }
   .header-nav-items {
-    background-color: #f7f7f7;
+    background-color: #5b4dbb;
     height: 115px;
     margin-left: 35px;
     margin-right: 35px;
@@ -8560,7 +8570,7 @@ a:hover {
   }
   .box_central_top {
     width: 102%;
-    height: 715px;
+    height: 815px;
   }
   .text-light {
     font-size: 1.8rem !important;

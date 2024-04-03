@@ -1,12 +1,10 @@
 /* eslint-disable prettier/prettier */
 import React, { useState, useEffect, useContext } from "react"
 import { Formik, Form, Field, ErrorMessage } from "formik"
-import moment from "moment"
 import * as Yup from "yup"
 import MaskedInput from "react-text-mask"
 import Aos from "aos"
 import "aos/dist/aos.css"
-import DatePicker from "react-datepicker"
 
 import "react-datepicker/dist/react-datepicker.css"
 import toast, { Toaster } from "react-hot-toast"
@@ -127,7 +125,8 @@ const SectionRegister = () => {
   }, [])
 
   return (
-    <section id="section-contact" className="dark-mode">
+    // <section id="section-contact" className="dark-mode">
+    <section id="section-contact">
       <Toaster />
       <div className="wm wm-border dark" data-aos="fade-down">
         Contate-nos
@@ -135,7 +134,7 @@ const SectionRegister = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-6 offset-md-3 text-center">
-            <h1 data-aos="fade-up" style={{ marginTop: "20px" }}>
+            <h1 data-aos="fade-up" style={{ marginTop: "20px", color: "#fff" }}>
               Contato
             </h1>
             <div className="separator">

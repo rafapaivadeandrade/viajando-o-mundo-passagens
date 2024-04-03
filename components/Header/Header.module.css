@@ -9,6 +9,9 @@
   max-width: 9% !important;
   margin-left: 10px;
 }
+.logo img {
+  scale: 2;
+}
 #img img {
   margin-left: 20px;
 }
@@ -40,6 +43,12 @@
   fill: #fff !important;
 }
 @media only screen and (max-width: 767px) {
+  .logo {
+    max-width: 17% !important;
+  }
+  .logo img {
+    scale: 3;
+  }
   .containerHamburguer {
     display: inline-block;
   }

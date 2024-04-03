@@ -1,9 +1,9 @@
-const mail = require('@sendgrid/mail');
+const mail = require("@sendgrid/mail")
 
-mail.setApiKey(process.env.SENDGRID_API_KEY);
+mail.setApiKey(process.env.SENDGRID_API_KEY)
 
 export default function handler(req, res) {
-  const body = JSON.parse(req.body);
+  const body = JSON.parse(req.body)
   const message = `
     Nome: ${body.name}\r\n
     Email: ${body.email}\r\n
@@ -14,15 +14,15 @@ export default function handler(req, res) {
     Estado: ${body.fields.state}\r\n
     Contato: ${body.fields.contact}\r\n
     Mensagem: ${body.message}\r\n
-  `;
+  `
   const data = {
-    to: `viajandoomundopassagens@gmail.com`,
-    from: 'viajandoomundopassagens@viajandoomundo.com',
-    subject: 'Contato Sobre Passagem',
-    text: message
+    to: `mundomilhaseviagens@gmail.com`,
+    from: "viajandoomundopassagens@viajandoomundo.com",
+    subject: "Contato Sobre Passagem",
+    text: message,
   }
 
-  mail.send(data);
+  mail.send(data)
 
-  res.status(200).json({ status: 'E-mail enviado com sucesso' })
+  res.status(200).json({ status: "E-mail enviado com sucesso" })
 }

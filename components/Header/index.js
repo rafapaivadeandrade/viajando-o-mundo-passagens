@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "react-scroll"
 import styles from "./Header.module.css"
-// import logo from "../../public/toda_preta.png"
-// import logo from "../../public/Projeto_marca_aberta.svg"
-// import logo from "../../public/icone01.png"
 import logo from "../../public/cor_mais_clara.png"
 import Image from "next/image"
 import { BsTelephone, BsInstagram } from "react-icons/bs"
@@ -41,12 +38,7 @@ const Header = () => {
             smooth
             duration={1000}
           >
-            <Image
-              src={logo}
-              alt="viajandoomundopassagenslogo"
-              // width={4000}
-              // height={4000}
-            />
+            <Image src={logo} alt="mundomilhaslogo" />
           </Link>
         </div>
         <nav className={[`header__nav col-xl-6 col-lg-6`, styles.navItems]}>
@@ -81,7 +73,6 @@ const Header = () => {
           className="col-xl-4 col-lg-4 d-none d-flex justify-content-end align-items-center"
           style={{ backgroundColor: "#5B4DBB" }}
         >
-          {/* {windowWidth <= 767 && ( */}
           <div className={`social_wrap d-flex ${windowWidth <= 767 && "mt-4"}`}>
             <div className={styles.number}>
               <p style={{ fontWeight: "600" }}>
@@ -98,7 +89,7 @@ const Header = () => {
             <div className="container-media">
               <p style={{ fontWeight: "600" }}>
                 <a
-                  href="https://www.instagram.com/viajandoomundopassagens"
+                  href="https://www.instagram.com/mundomilhaseviagens"
                   style={{ color: "#000" }}
                   target="_blank"
                   rel="noreferrer"
@@ -108,7 +99,6 @@ const Header = () => {
               </p>
             </div>
           </div>
-          {/* )} */}
 
           <div className={styles.containerHamburguer}>
             <ul>
@@ -133,7 +123,7 @@ const Header = () => {
             <ul>
               <li>
                 <a
-                  href="https://www.instagram.com/viajandoomundopassagens"
+                  href="https://www.instagram.com/mundomilhaseviagens"
                   style={{ color: "#000" }}
                   target="_blank"
                   rel="noreferrer"
@@ -163,7 +153,7 @@ const Header = () => {
             <li>
               <Link
                 className={`${menuOpen ? "show" : "hidden"}`}
-                style={{ fontWeight: "bold" }}
+                style={{ fontWeight: "bold", color: "#fff" }}
                 to="dalk-image"
                 smooth
                 duration={1000}
@@ -175,7 +165,7 @@ const Header = () => {
             <li>
               <Link
                 className={`${menuOpen ? "show" : "hidden"}`}
-                style={{ fontWeight: "bold" }}
+                style={{ fontWeight: "bold", color: "#fff" }}
                 to="section-about"
                 smooth
                 duration={1000}
@@ -187,7 +177,7 @@ const Header = () => {
             <li>
               <Link
                 className={`${menuOpen ? "show" : "hidden"}`}
-                style={{ fontWeight: "bold" }}
+                style={{ fontWeight: "bold", color: "#fff" }}
                 to="section-destiny"
                 smooth
                 duration={1000}
@@ -199,7 +189,7 @@ const Header = () => {
             <li>
               <Link
                 className={`${menuOpen ? "show" : "hidden"}`}
-                style={{ fontWeight: "bold" }}
+                style={{ fontWeight: "bold", color: "#fff" }}
                 to="section-contact"
                 smooth
                 duration={1000}

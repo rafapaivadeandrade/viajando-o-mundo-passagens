@@ -2,10 +2,27 @@ import Aos from "aos"
 import { useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
 import moment from "moment"
+import MaskedInput from "react-text-mask"
 
 const SectionPrice = ({ theme }) => {
   const { register, setValue, handleSubmit, errors, reset } = useForm({})
   const [registerField, setRegisterField] = useState({})
+  const [windowWidth, setWindowWidth] = useState(0)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth)
+    }
+
+    // Initial width on mount
+    setWindowWidth(window.innerWidth)
+
+    window.addEventListener("resize", handleResize)
+
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
 
   useEffect(() => {
     Aos.init({ duration: 2000 })
@@ -20,7 +37,10 @@ const SectionPrice = ({ theme }) => {
         "DD/MM/YYYY"
       )} Volta: ${moment(register.return).format("DD/MM/YYYY")} Quantidade: ${
         register.quantity
-      } Contato: ${register.whatsapp}&phone=5581989845674`
+      } Email: ${register.email} Tefelone: ${
+        register.telefone
+      }&phone=5581989845674 
+      `
     )
   }
 
@@ -51,8 +71,27 @@ const SectionPrice = ({ theme }) => {
                   Solicite uma cotação rápida
                 </h5>
 
-                <form className="form-contact contact_form">
-                  <div className="row" style={{ padding: "11px" }}>
+                <form
+                  className="form-contact contact_form"
+                  style={{ display: "flex", flexDirection: "column" }}
+                >
+                  <div
+                    style={
+                      windowWidth > 767
+                        ? {
+                            padding: "11px",
+                            display: "flex",
+                            flexDirection: "row",
+                            justifyContent: "center",
+                          }
+                        : {
+                            padding: "11px",
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                          }
+                    }
+                  >
                     <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center">
                       <label htmlFor="" color="#fff">
                         Origem
@@ -152,34 +191,70 @@ const SectionPrice = ({ theme }) => {
                       </div>
                     </div>
                     <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center">
-                      <label htmlFor="">Whatsapp</label>
+                      <label htmlFor="">Telefone</label>
                       <div className="form-group">
-                        <input
+                        <MaskedInput
+                          mask={[
+                            "(",
+                            /[1-9]/,
+                            /\d/,
+                            ")",
+                            " ",
+                            /\d/,
+                            /\d/,
+                            /\d/,
+                            /\d/,
+                            /\d/,
+                            "-",
+                            /\d/,
+                            /\d/,
+                            /\d/,
+                            /\d/,
+                          ]}
                           className="form-control valid"
-                          name="whatsapp"
-                          id="whatsapp"
+                          name="telefone"
+                          id="telefone"
                           type="text"
-                          placeholder="Whatsapp"
+                          placeholder="Telefone"
                           required
                           onChange={e => {
                             setRegisterField({
                               ...registerField,
-                              whatsapp: e.target.value,
+                              telefone: e.target.value,
                             })
                           }}
                         />
                       </div>
                     </div>
-                    <div className="col-md-12 d-flex justify-content-center mt-3">
-                      <div className="align-center">
-                        <button
-                          className="button boxed-btn btn-default"
-                          type="submit"
-                          onClick={handleSubmit(onSubmit)}
-                        >
-                          Solicitar Cotação
-                        </button>
+                    <div className="col-md-2 col-sm-6 d-flex flex-column align-items-center">
+                      <label htmlFor="">Email</label>
+                      <div className="form-group">
+                        <input
+                          className="form-control valid"
+                          name="email"
+                          id="email"
+                          type="email"
+                          placeholder="Email"
+                          required
+                          onChange={e => {
+                            setRegisterField({
+                              ...registerField,
+                              email: e.target.value,
+                            })
+                          }}
+                        />
                       </div>
+                    </div>
+                  </div>
+                  <div className="col-md-12 d-flex justify-content-center mt-3">
+                    <div className="align-center">
+                      <button
+                        className="button boxed-btn btn-default"
+                        type="submit"
+                        onClick={handleSubmit(onSubmit)}
+                      >
+                        Solicitar Cotação
+                      </button>
                     </div>
                   </div>
                 </form>
