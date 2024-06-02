@@ -38,7 +38,7 @@ const Header = () => {
             smooth
             duration={1000}
           >
-            <Image src={logo} alt="mundomilhaslogo" />
+            <Image src={logo} alt="mundomilhaseviagenslogo" />
           </Link>
         </div>
         <nav className={[`header__nav col-xl-6 col-lg-6`, styles.navItems]}>
